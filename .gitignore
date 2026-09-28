@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+certs/
+playground.py
+srv.log
