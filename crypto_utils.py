@@ -26,7 +26,7 @@ def verify(pk_hex:str,data:bytes,sig_hex:str)->bool:
         sig=bytes.fromhex(sig_hex)
         pk.verify(sig,data,ec.ECDSA(hashes.SHA256()))
         return True
-    except (InvalidSignature,ValueError):
+    except (InvalidSignature,ValueError,TypeError):
         return False
 
 def compute_leaf(did:str,pk_hex:str)->str:

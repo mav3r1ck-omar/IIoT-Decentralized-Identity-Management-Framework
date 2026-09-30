@@ -1,7 +1,7 @@
 from crypto_utils import sha256_hex
 
 def hash_pair(left_hex,right_hex)->str:
-    pair=b"\x01"+bytes.fromhex(right_hex)+bytes.fromhex(left_hex)
+    pair=b"\x01"+bytes.fromhex(left_hex)+bytes.fromhex(right_hex)
     return sha256_hex(pair)
 
 def next_level(level)->list:
