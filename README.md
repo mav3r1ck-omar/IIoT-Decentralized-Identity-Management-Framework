@@ -139,8 +139,8 @@ Admin routes require the header `X-Admin-Key` (the demo key is in `config.py`).
 
 ## 8. Team
 
-| Member       | Main components                                                                                                        |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| Omar Malik   | Crypto utilities, protocol, Merkle tree, registry, onboarding, batch manager, TLS certificates, performance evaluation |
-| Member 2     | Tokens, nonces, revocation, device client, attacks, live demo                                                          |
-| Hammad Ahmed | Access policy, verifier, fog node, HTTPS server and client, device runner, README                                      |
+| Member         | Main components                                                                                                        |
+| ------------   | ---------------------------------------------------------------------------------------------------------------------- |
+| Omar Malik     | Crypto utilities, protocol, Merkle tree, registry, onboarding, batch manager, TLS certificates, performance evaluation |
+| Shaheer Shaban | Tokens, nonces, revocation, device client, attacks, live demo                                                          |
+| Hammad Ahmed   | Access policy, verifier, fog node, HTTPS server and client, device runner, README                                      |
