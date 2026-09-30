@@ -1,3 +1,4 @@
+import time
 from crypto_utils import sign_json
 from merkle import build_levels, get_proof
 
@@ -65,7 +66,8 @@ class EpochBatchManager:
 
         # 4. anchor ONE root for the whole batch
         anchor_record = {"epoch_id": epoch_id, "root": root,
-                         "leaf_count": len(leaves), "fog_id": self.fog_id}
+                         "leaf_count": len(leaves), "fog_id": self.fog_id,
+                         "timestamp": round(time.time(), 3)}
         self.registry.anchor(anchor_record, sign_json(self.fog_sk, anchor_record))
 
         # 5. a proof package for every member

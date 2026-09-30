@@ -29,6 +29,13 @@ def create_app(fog):
     def forbidden(e):
         return jsonify({"error": str(e)}), 403
 
+    @app.errorhandler(KeyError)
+    def missing_field(e):
+        return jsonify({"error": f"missing field {e}"}), 400
+
+    @app.errorhandler(TypeError)
+    def wrong_type(e):
+        return jsonify({"error": "malformed request: a field has the wrong type"}), 400
     # ---------------- Phase 1: onboarding ----------------
     @app.post("/register/start")
     def register_start():
